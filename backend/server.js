@@ -1,4 +1,6 @@
 const express = require("express");
+const dotenv=require("dotenv")
+dotenv.config()
 
 const connectDB = require("./config/db");
 const router = require("./routes/hotelRoutes");
@@ -12,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-const PORT = 8000;
+const PORT =process.env.PORT ||5001;
 
 app.use(express.json());
 app.use("/uploads", express.static("uploads")); // serve images

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import  { apiForm } from "../../../utils/axiosInstance";
+
 import { UploadCloud } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
 import Input from "./Input";
+import { apiForm } from "../../utils/axiosInstance";
 
 
 const HotelForm = ({ editing = false, hotelId, onSuccess }) => {

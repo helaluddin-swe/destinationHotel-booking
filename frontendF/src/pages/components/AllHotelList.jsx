@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
-import { useNavigate } from "react-router-dom";
-import { apiJson } from "../../../utils/axiosInstance";
+import { Link, useNavigate } from "react-router-dom";
+
 import HotelForm from "./HotelInput";
 import { CirclePlus } from "lucide-react";
+import { apiJson } from "../../utils/axiosInstance";
 
 
 
@@ -67,6 +68,7 @@ const AllHotelList = () => {
   return (
     <div className="min-h-screen py-6 px-4">
       <div className="text-center mb-6 ">
+      <Link to={"/"}>Home</Link>
         <h3 className="text-3xl font-bold md:text-5xl text-yellow-500 mb-2 ">Our Top-Rated Hotels
         </h3>
         <span className="text-md max-w-2xl text-center justify-center text-gray-400 mb-4">

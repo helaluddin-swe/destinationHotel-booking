@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import { apiForm, apiJson,  } from "../../../utils/axiosInstance";
+
 import HotelForm from "./HotelInput";
+import { apiJson } from "../../utils/axiosInstance";
 
 
 

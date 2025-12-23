@@ -7,9 +7,9 @@ const router = require("./routes/hotelRoutes");
 const cors = require("cors");
 
 const bodyParser = require("body-parser");
-
+const allowedOrigin=["http://localhost:5173","https://destinationhotelbooking-wfv5.vercel.app/"]
 const app = express();
-app.use(cors());
+app.use(cors({origin:allowedOrigin,credentials:true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -21,7 +21,5 @@ app.use("/uploads", express.static("uploads")); // serve images
 app.use("/api/hotels", router);
 // db
 connectDB()
-
-
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
   

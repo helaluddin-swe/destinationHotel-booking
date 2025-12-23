@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import HotelForm from "./HotelInput";
 import { CirclePlus } from "lucide-react";
 import { apiJson } from "../../utils/axiosInstance";
+import { BASE_URL } from "../../utils/axiosInstance";
 
 
 
@@ -99,7 +100,7 @@ const AllHotelList = () => {
               >
                 {hotel.hotelImage && (
                   <img
-                    src={`http://localhost:8000/uploads/${hotel.hotelImage}`}
+                    src={`${BASE_URL}/${hotel.hotelImage}`}
                     alt={hotel.hotelName}
                     className="w-full h-48 object-cover"
                   />

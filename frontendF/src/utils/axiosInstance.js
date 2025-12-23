@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = `${import.meta.env.VITE_API_URL}/api/hotels`;
+export const BASE_URL = `${import.meta.env.VITE_API_URL}/api/hotels`;
 
 export const apiJson = axios.create({
   baseURL: BASE_URL,

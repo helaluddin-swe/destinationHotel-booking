@@ -7,7 +7,7 @@ const router = require("./routes/hotelRoutes");
 const cors = require("cors");
 
 const bodyParser = require("body-parser");
-const allowedOrigin=["http://localhost:5174","https://helaluddin-swe-greenbooked.vercel.app"]
+const allowedOrigin=["http://localhost:5174","https://helaluddin-swe-greenbooked.vercel.app/"]
 const app = express();
 app.use(cors({origin:allowedOrigin,credentials:true}));
 app.use(express.json());

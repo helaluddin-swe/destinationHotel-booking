@@ -2,10 +2,10 @@ const express = require("express");
 const dotenv=require("dotenv")
 dotenv.config()
 
-const connectDB = require("./config/db");
-const router = require("./routes/hotelRoutes");
-const cors = require("cors");
 
+const router = require("./routes/hotelRoutes.js");
+const cors = require("cors");
+const connectDB=require("./config/db.js")
 const bodyParser = require("body-parser");
 const allowedOrigin=["http://localhost:5174","https://helaluddin-swe-greenbooked.vercel.app/"]
 const app = express();
@@ -21,5 +21,6 @@ app.use("/uploads", express.static("uploads")); // serve images
 app.use("/api/hotels", router);
 // db
 connectDB()
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
   
